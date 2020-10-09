@@ -1,3 +1,11 @@
+# Notes
+
+## Doctrine Extensions Bundle
+ 
+    composer require stof/doctrine-extensions-bundle
+
+https://github.com/Atlantic18/DoctrineExtensions/tree/v2.4.x/doc
+
 # Joyful Development with Symfony
 
 Well hi there! This repository holds the code and script

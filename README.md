@@ -6,6 +6,14 @@
 
 https://github.com/Atlantic18/DoctrineExtensions/tree/v2.4.x/doc
 
+## lancer SQL
+
+`bin/console doctrine:query:sql 'SELECT * FROM genus'`
+
+## git grep
+
+`git grep genus_show`
+
 # Joyful Development with Symfony
 
 Well hi there! This repository holds the code and script

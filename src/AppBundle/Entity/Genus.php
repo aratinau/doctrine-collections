@@ -176,4 +176,14 @@ class Genus
     {
         $this->slug = $slug;
     }
+
+    public function addGenusScientist(User $user)
+    {
+        // avoid duplicate
+        if ($this->genusScientists->contains($user)) {
+            return;
+        }
+
+        $this->genusScientists[] = $user;
+    }
 }

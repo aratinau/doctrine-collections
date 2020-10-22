@@ -1,5 +1,9 @@
 # Notes
 
+### ManyToMany - reverse side
+
+Owning is always the ManyToOne side
+
 ## Doctrine Extensions Bundle
  
     composer require stof/doctrine-extensions-bundle

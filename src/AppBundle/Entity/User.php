@@ -76,7 +76,7 @@ class User implements UserInterface
     private $universityName;
 
     /**
-     * @ORM\OneToMany(targetEntity="GenusScientist", mappedBy="genusScientists")
+     * @ORM\OneToMany(targetEntity="GenusScientist", mappedBy="user")
      */
     private $studiedGenuses;
 
@@ -212,7 +212,7 @@ class User implements UserInterface
     }
 
     /**
-     * @return ArrayCollection|Genus[]
+     * @return ArrayCollection|GenusScientist[]
      */
     public function getStudiedGenuses()
     {

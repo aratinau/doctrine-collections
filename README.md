@@ -10,6 +10,10 @@ Owning is always the ManyToOne side
 
 https://github.com/Atlantic18/DoctrineExtensions/tree/v2.4.x/doc
 
+## clear doctrine cache
+
+`bin/console doctrine:cache:clear-metadata`
+
 ## lancer SQL
 
 `bin/console doctrine:query:sql 'SELECT * FROM genus'`

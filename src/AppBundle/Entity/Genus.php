@@ -2,7 +2,9 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\Repository\GenusScientistRepository;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -216,8 +218,24 @@ class Genus
 
     public function getExpertScientists()
     {
+        // This 3 blocks of code do the same thing
+
+        /*
+        $criteria = Criteria::create()
+            ->andWhere(Criteria::expr()->gt('yearsStudied', 20))
+            ->orderBy(['yearsStudied' => 'DESC'])
+        ;
+        return $this->getGenusScientists()->matching($criteria);*/
+
+        // OR by using repository and static method
+        return $this->getGenusScientists()->matching(
+            GenusScientistRepository::createExpertCriteria()
+        );
+
+        /*
+        This function return the same process of the criteria system
         return $this->getGenusScientists()->filter(function(GenusScientist $genusScientist) {
             return $genusScientist->getYearsStudied() > 20;
-        });
+        });*/
     }
 }

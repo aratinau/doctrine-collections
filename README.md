@@ -1,39 +1,12 @@
-# Notes
+# Doctrine Collections: ManyToMany, Forms & other Complex Relations
 
-### ManyToMany - reverse side
+![collections-535.png](./docs/collections-535.png)
 
-Owning is always the ManyToOne side
+https://symfonycasts.com/screencast/collections
 
-## Doctrine Extensions Bundle
- 
-    composer require stof/doctrine-extensions-bundle
-
-https://github.com/Atlantic18/DoctrineExtensions/tree/v2.4.x/doc
-
-## clear doctrine cache
-
-    php bin/console doctrine:cache:clear-result
-    php bin/console doctrine:cache:clear-query
-    php bin/console doctrine:cache:clear-metadata
-
-## lancer SQL
-
-`bin/console doctrine:query:sql 'SELECT * FROM genus'`
-
-## git grep
-
-`git grep genus_show`
-
-# Joyful Development with Symfony
-
-Well hi there! This repository holds the code and script
-for the Symfony course on KnpUniversity.
+# Install
 
 ## Setup
-
-If you've just downloaded the code, congratulations!
-
-To get it working, follow these steps:
 
 **Setup parameters.yml**
 
@@ -44,17 +17,9 @@ to get it.
 Next, look at the configuration and make any adjustments you
 need (like `database_password`).
 
-**Download Composer dependencies**
-
-Make sure you have [Composer installed](https://getcomposer.org/download/)
-and then run:
-
 ```
 composer install
 ```
-
-You may alternatively need to run `php composer.phar install`, depending
-on how you installed Composer.
 
 **Setup the Database**
 
@@ -85,12 +50,28 @@ Now check out the site at `http://localhost:8000`
 
 Have fun!
 
-## Have some Ideas or Feedback?
 
-And as always, thanks so much for your support and letting us do what
-we love!
 
-If you have suggestions or questions, please feel free to
-open an issue or message us.
+### ManyToMany - reverse side
 
-<3 Your friends at KnpUniversity
+Owning is always the ManyToOne side
+
+## Doctrine Extensions Bundle
+ 
+    composer require stof/doctrine-extensions-bundle
+
+https://github.com/Atlantic18/DoctrineExtensions/tree/v2.4.x/doc
+
+## clear doctrine cache
+
+    php bin/console doctrine:cache:clear-result
+    php bin/console doctrine:cache:clear-query
+    php bin/console doctrine:cache:clear-metadata
+
+## lancer SQL
+
+`bin/console doctrine:query:sql 'SELECT * FROM genus'`
+
+## git grep
+
+`git grep genus_show`
